@@ -40,7 +40,7 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error', message: err.message });
 });
 
-// إنشاء خادم HTTP موحد يدعم الـ Express والـ WebSockets معاً
+// إنشاء خادم HTTP موحد يدعم الـ Express والـ WebSockets معاً (مرة واحدة فقط)
 const server = http.createServer(app);
 
 // ربط خادم الـ WebSocket بخادم الـ HTTP
